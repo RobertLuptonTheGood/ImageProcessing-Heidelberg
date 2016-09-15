@@ -42,7 +42,7 @@ def getMpFigure(fig=None, clear=True):
         if _mpFigures.has_key(i):
             try:
                 lift(_mpFigures[i])
-            except Exception, e:
+            except Exception as e:
                 del _mpFigures[i]
                 
         if not _mpFigures.has_key(i):
@@ -57,7 +57,7 @@ def getMpFigure(fig=None, clear=True):
                 _show(self)
                 try:
                     lift(self)
-                except Exception, e:
+                except Exception as e:
                     pass
             # create a bound method
             import types
