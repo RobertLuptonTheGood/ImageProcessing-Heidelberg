@@ -34,7 +34,7 @@ def fixDefects(da, hlen=5, interpFunc=setPixels,
     x = np.arange(0, nx)
     for y in range(ny):
         if verbose:
-            print "%d\r" % y,; sys.stdout.flush()
+            print("%d\r" % y), sys.stdout.flush()
         
         bad = (da.mask[y, x] & badMask) != 0
         xbad = x[bad]
@@ -63,4 +63,4 @@ def fixDefects(da, hlen=5, interpFunc=setPixels,
             interpFunc(da, xind, y, good)
 
     if verbose:
-        print ""
+        print("")
